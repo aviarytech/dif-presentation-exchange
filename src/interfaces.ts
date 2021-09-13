@@ -1,5 +1,3 @@
-import { IVerifiablePresentation } from "./to_be_replaced";
-
 export enum SUBMISSION_FORMATS {
   JWT = "jwt",
   JWT_VerifiableCredential = "jwt_vc",
@@ -48,7 +46,7 @@ export interface IPresentationSubmission {
   descriptor_map: IDescriptor[];
 }
 
-export interface IDIFPresentationExchangeSubmission
-  extends IVerifiablePresentation {
+export interface IDIFPresentationExchangeSubmission {
   presentation_submission: IPresentationSubmission;
+  [x: string]: any;
 }
