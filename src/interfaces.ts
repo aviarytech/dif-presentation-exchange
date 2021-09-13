@@ -46,17 +46,7 @@ export interface IPresentationSubmission {
   descriptor_map: IDescriptor[];
 }
 
-export interface VerifiablePresentation {
-  "@context": string | string[];
-  type: string | string[];
-  holder?: string | { id: string; [x: string]: any };
-  verifiableCredential?: any;
-  proof?: any;
-  [x: string]: any;
-}
-
-export interface IDIFPresentationExchangeSubmission
-  extends VerifiablePresentation {
+export interface IDIFPresentationExchangeSubmission {
   presentation_submission: IPresentationSubmission;
   [x: string]: any;
 }
